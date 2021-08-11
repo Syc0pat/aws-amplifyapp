@@ -1,8 +1,8 @@
 {
-    "identityPoolName": "awsamplifyapp3d3fa892_identitypool_3d3fa892",
+    "identityPoolName": "testAuthIdentityPool",
     "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "awsamp3d3fa892",
-    "userPoolName": "awsamplifyapp3d3fa892_userpool_3d3fa892",
+    "resourceNameTruncated": "awsamp2b322c91",
+    "userPoolName": "awsamplifyapp",
     "autoVerifiedAttributes": [
         "email"
     ],
@@ -12,29 +12,28 @@
     ],
     "smsAuthenticationMessage": "Your authentication code is {####}",
     "smsVerificationMessage": "Your verification code is {####}",
-    "emailVerificationSubject": "Your verification code",
-    "emailVerificationMessage": "Your verification code is {####}",
+    "emailVerificationSubject": "Forgot password code: {####}",
+    "emailVerificationMessage": "Forgot password code: {####}",
     "defaultPasswordPolicy": false,
     "passwordPolicyMinLength": 8,
-    "passwordPolicyCharacters": [],
-    "requiredAttributes": [
-        "email"
+    "passwordPolicyCharacters": [
+        "Requires Lowercase",
+        "Requires Numbers",
+        "Requires Symbols",
+        "Requires Uppercase"
     ],
-    "aliasAttributes": [
+    "requiredAttributes": [
         "preferred_username"
     ],
+    "aliasAttributes": [],
     "userpoolClientGenerateSecret": false,
     "userpoolClientRefreshTokenValidity": 30,
-    "userpoolClientWriteAttributes": [
-        "email"
-    ],
-    "userpoolClientReadAttributes": [
-        "email"
-    ],
-    "userpoolClientLambdaRole": "awsamp3d3fa892_userpoolclient_lambda_role",
+    "userpoolClientWriteAttributes": [],
+    "userpoolClientReadAttributes": [],
+    "userpoolClientLambdaRole": "awsamp2b322c91_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "3d3fa892",
-    "resourceName": "awsamplifyapp3d3fa892",
+    "sharedId": "2b322c91",
+    "resourceName": "awsamplifyapp",
     "authSelections": "identityPoolAndUserPool",
     "authRoleArn": {
         "Fn::GetAtt": [
@@ -48,9 +47,13 @@
             "Arn"
         ]
     },
-    "useDefault": "default",
-    "userPoolGroupList": [],
     "serviceName": "Cognito",
+    "useDefault": "manual",
+    "userPoolGroups": false,
+    "userPoolGroupList": [],
+    "adminQueries": false,
+    "thirdPartyAuth": false,
+    "authProviders": [],
     "usernameCaseSensitive": false,
     "dependsOn": []
 }
